@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./styles/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Rubik&display=swap" rel="stylesheet">
     <title></title>
 </head>
 <body>
-    <header class="header__container">
+    <header id="header__back-to-top" class="header__container">
         <img class="header__logo" src="./img/Logo.svg" alt="">
+        <h1 class="header__name">INOVA<span class="header__name--green">GREEN</span></h1>
         <nav class="menu__nav">
             <ul class="menu__nav__list">
-                <li class="menu__nav__list--navicon"></li>
+                <li><img class="menu__nav__list--navicon" src="./img/Menu_icon.svg" alt="Menuicon"></li>
                 <li><a href="">Home</a></li>
                 <li><a href="">Discover</a></li>
             </ul>
@@ -32,16 +34,26 @@
             <article class="section__top__square--lightgrey">
                 <img src="./img/Circuit.svg" alt="Circuit">
             </article>
-            <article class="section__top--red"></article>
+            <article class="section__top--red">
+                <h3>INNOVA<span class="section__top--red--greenname">GREEN</span></h3>
+                <h3>We are a team of scientists and engineers specializing in renewable energy sources aswell as it’s integration to fit our society’s needs.
+                </h3>
+            </article>
         </section>
         <section class="section__bottom">
-            <article class="section__bottom--blue"></article>
-            <article class="section__bottom--green"></article>
+            <article class="section__bottom--blue">
+                <h2>Reinventing Our Future.</h2>
+                <a>Learn More</a>
+            </article>
+            <article class="section__bottom--green">
+                <h2>Environmental Policies.</h2>
+                <a>Learn More</a>
+            </article>
         </section>
         <img  class="bottom__image" src="./img/raisting-sattelit-reception-signal 3.jpg" alt="">
     </main>
     <footer class="footer__container">
-        <a  class="footer__container__button__a" href=""><img class="footer__container__button__img" src="./img/Arrow 1.svg" alt=""></a>
+        <a  class="footer__container__button__a" href="#header__back-to-top"><img class="footer__container__button__img" src="./img/Arrow.svg" alt=""></a>
     </footer>
 </body>
 </html>
