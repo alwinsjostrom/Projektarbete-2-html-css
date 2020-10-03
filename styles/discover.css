@@ -122,20 +122,57 @@ Main__container, a grid-container with articles, red, blue, solar, wind, wave, a
                          "wavearticle";
 }
 
+.main__container article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
 .main__container img {
     height: 60vw;
     width: 100vw;
     object-fit: cover;
 }
 
+.main__container h2 {
+    margin-bottom: .5rem;
+}
+
+.main__container a {
+    text-decoration: none;
+    color: var(--lightgrey);
+}
+
 .main__article--red {
     background: var(--red);
     grid-area: red;
+    padding: 4rem;
+}
+
+.main__article--red h2 {
+    font-size: 36px;
+}
+
+.main__article--red h3 {
+    font-size: 24px;
+}
+
+.main__name--green {
+    color: var(--lightgreen);
 }
 
 .main__article--blue {
     background: var(--blue);
     grid-area: blue;
+}
+
+.main__article--blue h3 {
+    font-size: 24px;
+}
+
+.main__article--red h2, .main__article--red h3, .main__article--blue h3 {
+    color: var(--white);
 }
 
 .main__image--solar {
@@ -144,6 +181,15 @@ Main__container, a grid-container with articles, red, blue, solar, wind, wave, a
 
 .main__article--solar {
     grid-area: solararticle;
+}
+
+.main__article--solar h2, .main__article--wind h2, .main__article--wave h2 {
+    color: var(--green);
+    font-size: 48px;
+}
+
+.main__article--solar a, .main__article--wind a, .main__article--wave a {
+    font-size: 30px;
 }
 
 .main__article--wind {
@@ -162,11 +208,6 @@ Main__container, a grid-container with articles, red, blue, solar, wind, wave, a
     grid-area: wavearticle;
 }
 
-
-
-
-
-
 /*General styling for all pages*/
 .footer__container {
     display: flex;
@@ -181,3 +222,29 @@ Main__container, a grid-container with articles, red, blue, solar, wind, wave, a
     margin: .5rem;
 }
 /*End of general styling*/
+
+/*Desktop modifyers*/
+@media screen and (min-width: 780px) {
+
+    .navicon {
+        display: none;
+    }
+
+    .main__container {
+        grid-template-rows: 30vw 10vw 30vw 30vw 30vw;
+        grid-template-columns: repeat(2, 50vw);
+        grid-template-areas: "red red"
+                             "blue blue"
+                             "solarimage solararticle"
+                             "windarticle windimage"
+                             "waveimage wavearticle"; 
+    }
+    .main__container img {
+        height: 30vw;
+        width: 50vw;
+    }
+
+    .footer__container {
+        padding-top: .8rem;
+    }
+}
