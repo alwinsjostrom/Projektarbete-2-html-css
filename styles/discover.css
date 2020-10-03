@@ -34,6 +34,7 @@ img {
     max-width: 100%;
 }
 
+/*Dropdown menu styling*/
 .menu__nav {
     width: 100vw;
     height: 100vh;
@@ -42,9 +43,9 @@ img {
     background: rgba(0,0,0,.85);
     display: flex;
     justify-content: center;
-    align-items: center;
     transform: translateY(-100%);
     transition: all .5s ease;
+    padding-top: 10vh;
 }
 
 .menu__nav__list {
@@ -70,15 +71,25 @@ img {
     color: var(--lightgrey);
 }
 
-/*Dropdown menu function*/
+/*Dropdown menu styling triggered by function()*/
 body.open nav {
     transform: translateX(0%);
 }
 
-body.open .navicon {
-    color: white;
+body.open .header__name {
+    color: var(--white);
 }
 
+body.open .header__logo path {
+    fill: var(--lightgreen);
+}
+
+body.open .navicon path {
+    stroke: var(--white);
+}
+/*End of dropdown menu*/
+
+/*Header__container, a flex-box with an svg image as logo, a company title, a desktop only menu, and the navicon as flex-items*/ 
 .header__container {
     background: var(--white);
     display: flex;
@@ -91,18 +102,24 @@ body.open .navicon {
     width: 8vw;
     min-width: 2.5rem;
     max-width: 3rem;
+    position: relative;
+    z-index: 9999;
 }
 
 .header__name {
-    font-size: 26px;
+    font-size: 1.6rem;
+    position: relative;
+    z-index: 9999;
 }
 
-.header__name--green, .section__top--red--greenname {
+.header__name--green {
     color: var(--lightgreen);
 }
 
 .navicon {
     max-width: 2.5rem;
+    position: relative;
+    z-index: 9999;
 }
 
 /*These links will only be visible when in desktop mode*/
@@ -175,11 +192,11 @@ Main__container, a grid-container with articles, red, blue, solar, wind, wave, a
 }
 
 .main__article--red h2 {
-    font-size: 36px;
+    font-size: 2.3rem;
 }
 
-.main__article--red h3 {
-    font-size: 24px;
+.main__article--red h3, .main__article--blue h3 {
+    font-size: 1.5rem;
 }
 
 .main__name--green {
@@ -189,10 +206,6 @@ Main__container, a grid-container with articles, red, blue, solar, wind, wave, a
 .main__article--blue {
     background: var(--blue);
     grid-area: blue;
-}
-
-.main__article--blue h3 {
-    font-size: 24px;
 }
 
 .main__article--red h2, .main__article--red h3, .main__article--blue h3 {
@@ -209,11 +222,11 @@ Main__container, a grid-container with articles, red, blue, solar, wind, wave, a
 
 .main__article--solar h2, .main__article--wind h2, .main__article--wave h2 {
     color: var(--green);
-    font-size: 48px;
+    font-size: 3rem;
 }
 
 .main__article--solar a, .main__article--wind a, .main__article--wave a {
-    font-size: 30px;
+    font-size: 1.9rem;
 }
 
 .main__article--wind {
@@ -252,8 +265,11 @@ Main__container, a grid-container with articles, red, blue, solar, wind, wave, a
 }
 /*End of general styling*/
 
-/*Desktop modifyers*/
+/*Desktop modifyers for second page(discover.html)*/
 @media screen and (min-width: 780px) {
+    .menu__nav {
+        display: none;
+    }
 
     .header__container {
         padding: .5rem 3rem;
@@ -280,6 +296,7 @@ Main__container, a grid-container with articles, red, blue, solar, wind, wave, a
                              "windarticle windimage"
                              "waveimage wavearticle"; 
     }
+
     .main__container img {
         height: 30vw;
         width: 50vw;

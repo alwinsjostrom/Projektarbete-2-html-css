@@ -7,10 +7,12 @@
     <link rel="stylesheet" type="text/css" href="./styles/home.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Rubik&display=swap" rel="stylesheet">
     <link id="favicon" rel="shortcut icon" href="./img/Logo_green.svg" /favicon.ico">
-    <title>Innovagreen</title>
+    <!--A fictional company name-->
+    <title>Inovagreen</title>
 </head>
 
 <body>
+    <!--Dropdown menu-->
     <nav class="menu__nav">
         <ul class="menu__nav__list">
             <li><a class="menu__nav__list--active" href="index.html">Home</a></li>
@@ -19,9 +21,19 @@
         </ul>
     </nav>
     <header id="header__back-to-top" class="header__container">
-        <img class="header__logo" src="./img/Logo.svg" alt="">
+        <!--The svg code is implemented here to enable color changing of the images, header__logo, and navicon-->
+        <svg class="header__logo" width="199" height="48.47" viewBox="0 0 199 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M100 0L124 14L149 28V57V85L124 99L100 113L75 99L51 85V57V28L75 14L100 0ZM100 12L80 23L61 34V79L80 90L100 102L119 90L139 79V34L119 23L100 12Z" fill="#111111"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M150 88L175 102L199 116V145V173L175 187L150 201L126 187L101 173V145V116L126 102L150 88ZM150 100L111 122V167L150 190L189 167V122L150 100Z" fill="#111111"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M49 88L74 102L98 116V144V173L74 187L49 201L25 187L0 173V144V116L25 102L49 88ZM49 99L10 122V167L49 189L88 167V122L49 99Z" fill="#111111"/>
+        </svg>            
         <h1 class="header__name">INOVA<span class="header__name--green">GREEN</span></h1>
-        <img class="navicon" src="./img/Menu_icon.svg" alt="Menuicon">
+        <svg class="navicon" width="310" height="33.55" viewBox="0 0 310 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M29.6838 229.663H280.33" stroke="#111111" stroke-width="49.3364" stroke-linecap="round"/>
+            <path d="M29.6838 129.663H280.33" stroke="#111111" stroke-width="49.3364" stroke-linecap="round"/>
+            <path d="M29.6838 29.6627H280.33" stroke="#111111" stroke-width="49.3364" stroke-linecap="round"/>
+        </svg>  
+        <!--Desktop menu, these links will only be visible when in desktop mode-->
         <nav class="header__menu">
             <ul class="header__menu--desktop">
                 <li><a class="header__menu__desktop--active" href="index.html">Home</a></li>
@@ -30,7 +42,9 @@
         </nav>
     </header>
     <main class="main__container">
+        <!--Hero__image, not included in any of the sections-->
         <img class="hero__image" src="./img/space-telescope-mirror-segments-james-webb-cosmos-46168 4.jpg" alt="">
+        <!--Section__top, a grid-container with 4 different grey squares as grid-items-->
         <section class="section__top">
             <article class="section__top__square--black">
                 <img src="./img/Magnify.svg" alt="Magnify">
@@ -45,6 +59,7 @@
                 <img src="./img/Circuit.svg" alt="Circuit">
             </article>
         </section>
+        <!--Section__bottom, grid container with red, blue, and green articles as grid items-->
         <section class="section__bottom">
             <article class="section__bottom--red">
                 <h3>INNOVA<span class="section__top--red--greenname">GREEN</span></h3>
@@ -59,18 +74,21 @@
                 <a>Learn More</a>
             </article>
         </section>
+        <!--Bottom__image, not included in any of the sections-->
         <img class="bottom__image" src="./img/grey.jpeg" alt="">
     </main>
-    <footer class="footer__container">
+
+    <footer class="footer__container"><!--Footer__container, a flex-box with an svg image as flex-item-->
         <a class="footer__container__button__a" href="#header__back-to-top"><img class="footer__container__button__img"
                 src="./img/Arrow.svg" alt=""></a>
     </footer>
 </body>
 
 <script>
-    //Find the navicon
+    //Dropdown menu script
+        //Find the navicon
     document.querySelector('.navicon').addEventListener('click', function(){
-        //Run if click is detected
+        //Run function if click is detected
         document.querySelector('body').classList.toggle('open')
 })
 </script>
