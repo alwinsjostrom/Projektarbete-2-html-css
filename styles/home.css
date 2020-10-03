@@ -34,6 +34,51 @@ img {
     max-width: 100%;
 }
 
+.menu__nav {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+    background: rgba(0,0,0,.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: all .5s ease;
+}
+
+.menu__nav__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu__nav__list li {
+    margin: 2rem;
+}
+
+.menu__nav__list a {
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
+.menu__nav__list--inactive {
+    color: var(--white);
+}
+
+.menu__nav__list--active {
+    color: var(--lightgrey);
+}
+
+/*Dropdown menu function*/
+body.open nav {
+    transform: translateX(0%);
+}
+
+body.open .navicon {
+    color: white;
+}
+
 .header__container {
     background: var(--white);
     display: flex;
@@ -56,20 +101,10 @@ img {
     color: var(--lightgreen);
 }
 
-.menu__nav__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.menu__nav__list--navicon {
+.navicon {
     max-width: 2.5rem;
 }
 
-.menu__nav__list a {
-    text-decoration: none;
-    display: none;
-}
 /*End of general styling*/
 
 /*Start of specific styling for Homepage(index.html)
@@ -192,6 +227,7 @@ Hero__image, not included in any of the sections*/
 .footer__container {
     display: flex;
     justify-content: center;
+    margin-top: -.5rem;
 }
 
 .footer__container__button__a {
@@ -207,6 +243,14 @@ Hero__image, not included in any of the sections*/
 
     .header__container {
         padding: .5rem 3rem;
+    }
+
+    .header__name {
+        margin: 0 auto 0 3rem;
+    }
+
+    .navicon {
+        display: none;
     }
 
     .section__top {

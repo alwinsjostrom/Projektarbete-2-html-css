@@ -1,0 +1,183 @@
+/*Start of general styling for all pages*/
+:root {
+    --white: #ffffff;
+    --black: #111111;
+    --darkgrey: #444444;
+    --grey: #777777;
+    --lightgrey: #999999;
+    --lightergrey: #eeeeee;
+    --red: #9F3D3D;
+    --blue: #345162;
+    --green: #386548;
+    --lightgreen: #a6e2a6;
+}
+
+h1, a {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+}
+
+h3, h2 {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.menu__nav {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+    background: rgba(0,0,0,.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: all .5s ease;
+}
+
+.menu__nav__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu__nav__list li {
+    margin: 2rem;
+}
+
+.menu__nav__list a {
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
+.menu__nav__list--inactive {
+    color: var(--white);
+}
+
+.menu__nav__list--active {
+    color: var(--lightgrey);
+}
+
+/*Dropdown menu function*/
+body.open nav {
+    transform: translateX(0%);
+}
+
+body.open .navicon {
+    color: white;
+}
+
+.header__container {
+    background: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1.2rem;
+}
+
+.header__logo {
+    width: 8vw;
+    min-width: 2.5rem;
+    max-width: 3rem;
+}
+
+.header__name {
+    font-size: 26px;
+}
+
+.header__name--green, .section__top--red--greenname {
+    color: var(--lightgreen);
+}
+
+.navicon {
+    max-width: 2.5rem;
+}
+
+/*End of general styling*/
+
+/*Start of specific styling for second page(discover.html)
+Main__container, a grid-container with articles, red, blue, solar, wind, wave, and 3 images as grid items*/
+.main__container {
+    display: grid;
+    grid-template-rows: 100vw 20vw 60vw 35vw 60vw 35vw 60vw 35vw;
+    grid-template-areas: "red"
+                         "blue"
+                         "solarimage"
+                         "solararticle"
+                         "windimage"
+                         "windarticle"
+                         "waveimage"
+                         "wavearticle";
+}
+
+.main__container img {
+    height: 60vw;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.main__article--red {
+    background: var(--red);
+    grid-area: red;
+}
+
+.main__article--blue {
+    background: var(--blue);
+    grid-area: blue;
+}
+
+.main__image--solar {
+    grid-area: solarimage;
+}
+
+.main__article--solar {
+    grid-area: solararticle;
+}
+
+.main__article--wind {
+    grid-area: windarticle;
+}
+
+.main__image--wind {
+    grid-area: windimage;
+}
+
+.main__image--wave {
+    grid-area: waveimage;
+}
+
+.main__article--wave {
+    grid-area: wavearticle;
+}
+
+
+
+
+
+
+/*General styling for all pages*/
+.footer__container {
+    display: flex;
+    justify-content: center;
+    margin-top: -.5rem;
+}
+
+.footer__container__button__a {
+    background-color: var(--lightergrey);
+    border-radius: 50%;
+    padding: .5rem;
+    margin: .5rem;
+}
+/*End of general styling*/
