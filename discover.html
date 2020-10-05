@@ -17,9 +17,10 @@
         <ul class="menu__nav__list">
             <li><a class="menu__nav__list--inactive" href="index.html">Home</a></li>
             <li><a class="menu__nav__list--active" href="discover.html">Discover</a></li>
-            <li><a class="menu__nav__list--inactive href="">Contact</a></li>
+            <li><a class="menu__nav__list--inactive" href="#">Contact</a></li>
         </ul>
     </nav>
+    <!--Header__container, a flex-box with an svg logo, a company title, a desktop only menu, and the navicon as flex-items-->
     <header id="header__back-to-top" class="header__container">
         <!--The svg code is implemented here to enable color changing of these files > header__logo, and navicon-->
         <svg class="header__logo" width="199" height="48.47" viewBox="0 0 199 201" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -73,8 +74,8 @@
     </footer>
 </body>
 
+<!--Dropdown menu script-->
 <script>
-    //Dropdown menu script
         //Find the navicon
     document.querySelector('.navicon').addEventListener('click', function(){
         //Run if click is detected

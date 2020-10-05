@@ -17,9 +17,10 @@
         <ul class="menu__nav__list">
             <li><a class="menu__nav__list--active" href="index.html">Home</a></li>
             <li><a class="menu__nav__list--inactive" href="discover.html">Discover</a></li>
-            <li><a class="menu__nav__list--inactive" href="">Contact</a></li>
+            <li><a class="menu__nav__list--inactive" href="#">Contact</a></li>
         </ul>
     </nav>
+    <!--Header__container, a flex-box with an svg logo, a company title, a desktop only menu, and the navicon as flex-items-->
     <header id="header__back-to-top" class="header__container">
         <!--The svg code is implemented here to enable color changing of the images, header__logo, and navicon-->
         <svg class="header__logo" width="199" height="48.47" viewBox="0 0 199 201" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +29,7 @@
             <path fill-rule="evenodd" clip-rule="evenodd" d="M49 88L74 102L98 116V144V173L74 187L49 201L25 187L0 173V144V116L25 102L49 88ZM49 99L10 122V167L49 189L88 167V122L49 99Z" fill="#111111"/>
         </svg>            
         <h1 class="header__name">INOVA<span class="header__name--green">GREEN</span></h1>
-        <svg class="navicon" width="310" height="33.55" viewBox="0 0 310 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="navicon" width="40" height="33.55" viewBox="0 0 310 260" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M29.6838 229.663H280.33" stroke="#111111" stroke-width="49.3364" stroke-linecap="round"/>
             <path d="M29.6838 129.663H280.33" stroke="#111111" stroke-width="49.3364" stroke-linecap="round"/>
             <path d="M29.6838 29.6627H280.33" stroke="#111111" stroke-width="49.3364" stroke-linecap="round"/>
@@ -41,6 +42,7 @@
             </ul>
         </nav>
     </header>
+    <!--Main__container, contains section__top, and section__bottom-->
     <main class="main__container">
         <!--Hero__image, not included in any of the sections-->
         <img class="hero__image" src="./img/space-telescope-mirror-segments-james-webb-cosmos-46168 4.jpg" alt="">
@@ -77,15 +79,15 @@
         <!--Bottom__image, not included in any of the sections-->
         <img class="bottom__image" src="./img/grey.jpeg" alt="">
     </main>
-
+    <!--Footer__container, a flex-box with an svg image as the flex-item-->
     <footer class="footer__container"><!--Footer__container, a flex-box with an svg image as flex-item-->
         <a class="footer__container__button__a" href="#header__back-to-top"><img class="footer__container__button__img"
                 src="./img/Arrow.svg" alt=""></a>
     </footer>
 </body>
 
+<!--Dropdown menu script-->
 <script>
-    //Dropdown menu script
         //Find the navicon
     document.querySelector('.navicon').addEventListener('click', function(){
         //Run function if click is detected

@@ -15,15 +15,20 @@
 h1, a {
     font-family: 'Rubik', sans-serif;
     margin: 0;
+    text-decoration: none;
 }
 
-h3, h2 {
+h2, h3 {
     font-family: 'Roboto Mono', monospace;
     margin: 0;
 }
 
 a:hover {
     cursor: pointer;
+}
+
+ul {
+    list-style: none;
 }
 
 body {
@@ -44,12 +49,11 @@ img {
     display: flex;
     justify-content: center;
     transform: translateY(-100%);
-    transition: all .5s ease;
+    transition: all .3s ease;
     padding-top: 10vh;
 }
 
 .menu__nav__list {
-    list-style: none;
     margin: 0;
     padding: 0;
 }
@@ -60,20 +64,19 @@ img {
 
 .menu__nav__list a {
     font-size: 2.5rem;
-    text-decoration: none;
 }
+
+.menu__nav__list--active {
+    color: var(--lightgrey);
+}       
 
 .menu__nav__list--inactive {
     color: var(--white);
 }
 
-.menu__nav__list--active {
-    color: var(--lightgrey);
-}
-
-/*Dropdown menu styling triggered by function()*/
+/*Dropdown menu styling triggered by JS function()*/
 body.open nav {
-    transform: translateX(0%);
+    transform: translateY(0%);
 }
 
 body.open .header__name {
@@ -87,9 +90,13 @@ body.open .header__logo path {
 body.open .navicon path {
     stroke: var(--white);
 }
+
+body.open .navicon path:first-child, body.open .navicon path:last-child {
+    display: none;
+}
 /*End of dropdown menu*/
 
-/*Header__container, a flex-box with an svg image as logo, a company title, a desktop only menu, and the navicon as flex-items*/ 
+/*Header__container, a flex-box with an svg logo, a company title, a desktop only menu, and the navicon as flex-items*/ 
 .header__container {
     background: var(--white);
     display: flex;
@@ -98,28 +105,29 @@ body.open .navicon path {
     padding: .5rem 1.2rem;
 }
 
-.header__logo {
-    width: 8vw;
-    min-width: 2.5rem;
-    max-width: 3rem;
+/*Making the logo, name, and navicon visible in the menu*/
+.header__logo, .header__logo path, .header__name, .navicon, .navicon path {
     position: relative;
     z-index: 9999;
+    transition: all .3s ease;
+}
+
+.header__logo {
+    min-width: 2.5rem;
+    width: 8vw;
+    max-width: 3rem;
 }
 
 .header__name {
     font-size: 1.6rem;
-    position: relative;
-    z-index: 9999;
 }
 
-.header__name--green {
+.header__name--green, .section__top--red--greenname {
     color: var(--lightgreen);
 }
 
 .navicon {
     max-width: 2.5rem;
-    position: relative;
-    z-index: 9999;
 }
 
 /*These links will only be visible when in desktop mode*/
@@ -128,24 +136,21 @@ body.open .navicon path {
 }
 
 .header__menu--desktop {
-    list-style: none;
     display: flex;
 }
 
 .header__menu--desktop a {
     padding: 1rem;
     font-size: 1.5rem;
-    text-decoration: none;
-}
-
-.header__menu__desktop--inactive {
-    color: var(--black);
 }
 
 .header__menu__desktop--active {
     color: var(--lightgrey);
 }
 
+.header__menu__desktop--inactive {
+    color: var(--black);
+}
 /*End of general styling*/
 
 /*Start of specific styling for second page(discover.html)
@@ -161,6 +166,7 @@ Main__container, a grid-container with articles, red, blue, solar, wind, wave, a
                          "windarticle"
                          "waveimage"
                          "wavearticle";
+    margin-bottom: .5rem;
 }
 
 .main__container article {
@@ -261,12 +267,13 @@ Main__container, a grid-container with articles, red, blue, solar, wind, wave, a
 }
 
 .footer__container {
-    padding-top: .5rem;
+    padding: .5rem;
 }
 /*End of general styling*/
 
 /*Desktop modifyers for second page(discover.html)*/
 @media screen and (min-width: 780px) {
+    /*General desktop styling for all pages*/
     .menu__nav {
         display: none;
     }
@@ -277,6 +284,7 @@ Main__container, a grid-container with articles, red, blue, solar, wind, wave, a
 
     .header__name {
         margin: 0 auto 0 3rem;
+        font-size: 1.9rem;
     }
 
     .navicon {
@@ -287,6 +295,7 @@ Main__container, a grid-container with articles, red, blue, solar, wind, wave, a
         display: unset;
     }
 
+    /*Specific desktop-styling for Second page(discover.html)*/
     .main__container {
         grid-template-rows: 30vw 10vw 30vw 30vw 30vw;
         grid-template-columns: repeat(2, 50vw);
