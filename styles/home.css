@@ -96,7 +96,7 @@ body.open .navicon path:first-child, body.open .navicon path:last-child {
 }
 /*End of dropdown menu*/
 
-/*Header__container, a flex-box with an svg logo, a company title, a desktop only menu, and the navicon as flex-items*/ 
+/*  */ 
 .header__container {
     background: var(--white);
     display: flex;
@@ -232,11 +232,6 @@ Hero__image, not included in any of the sections*/
 .section__bottom--red {
     background: var(--red);
     grid-area: red;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 1.2rem;
 }
 
 .section__bottom--red h3 {
